@@ -36,29 +36,6 @@ client.login(process.env.BOT_TOKEN)
 client.on('ready', () => {
 
     const actvs = [
-    "Технические работы"
-    ];
-    client.user.setPresence({ 
-            status: 'online', 
-            activity: { 
-                name: `${actvs[Math.floor(Math.random() * (actvs.length - 1) + 1)]}`,
-                type: "COMPETING" 
-            } 
-        });
-    setInterval(() => { 
-    	client.user.setPresence({ 
-            status: 'online', 
-            activity: { 
-                name: `${actvs[Math.floor(Math.random() * (actvs.length - 1) + 1)]}`,
-                type: "COMPETING" 
-            } 
-        });
-    }, 500);
-});
-
-/* client.on('ready', () => {
-
-    const actvs = [
     "GTA Online",
     "Call of Duty: Warzone",
     "Forza Horizon 5",
@@ -88,4 +65,4 @@ client.on('ready', () => {
             } 
         });
     }, 3000000);
-}); */
+});
