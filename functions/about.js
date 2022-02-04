@@ -4,7 +4,7 @@ module.exports.run = async(client,message,args) => {
 	const embed = new Discord.MessageEmbed()
 	.setTitle('О боте')
 	.setColor('#2F3136')
-	.addField('Разработчик', 'Clugrosev#5822\n**➥ [[Github]](https://github.com/cclugrosev)**\n**➥ [[Github.io]](https://cclugrosev.github.io)**', true)
+	.addField('Разработчик', 'Intoshiro#5822\n**➥ [[Github]](https://github.com/1ntosh1ro)**', true)
 	.addField('Страна создания', '<:flag_ua:910255758321524756> Украина / Україна / Ukraine', true)
 	.addField('Язык программирования', 'JavaScript', true)
 	.addField('Управление из', 'Geo Technologies', true)
