@@ -8,7 +8,7 @@ module.exports.run = async(client,message,args) => {
 	.addField('RP команды', '**>kill** - убить\n**>wasted** - "*потрачено*"\n**>suicide** - самоубийство\n**>hug** - обнять\n**>pat** - погладить\n**>wink** - подмигнуть\n**>me** - действие', true)
 	.addField('Утилиты', '**>avatar** - узнать аватар пользователя\n**>say** - сказать от имени бота', true)
 	.addField('Животные', '**>bird**\n**>cat**\n**>dog**\n**>fox**\n**>kangaroo**\n**>koala**\n**>panda**\n**>raccoon**\n**>redpanda**', true)
-	.addField('Генераторы', '**>coin** - подкинуть монетку\n**>company** - генератор фирмы\n**>computer** - генератор свойств компьютера\n**>crypto** - генератор крипто-монеты\n**>device** - генератор устройства', true)
+	.addField('Генераторы', '**>coin** - подкинуть монетку', true)
 	message.channel.send(embed)
 }
 
