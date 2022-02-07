@@ -15,10 +15,7 @@ module.exports.run = async(client,message,args) => {
 				
 				message.channel.send(embed);
 			})
-	let in = args.join(" ").slice(5);
-	if (in === null) {
-		message.reply('Укажите UUID')
-	}
+	if (args.join(" ").slice(5) === null) return
 }
 module.exports.help = {
 	name: 'uuid'
