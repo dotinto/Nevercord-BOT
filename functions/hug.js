@@ -3,7 +3,7 @@ const members = new Discord.GuildMember();
 const fetch = require('node-fetch')
 
 module.exports.run = async(client,message,args) => {
-	let member = message.mentions.users.first();
+	let member = message.mentions.users.first() || message.author.username;
 	let res = fetch('https://some-random-api.ml/animu/hug')
 		.then(res => res.json())
 		.then(json => {

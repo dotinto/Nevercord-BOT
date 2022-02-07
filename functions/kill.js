@@ -1,7 +1,7 @@
 module.exports.run = async(client,message,args) => {
 	const Discord = require('discord.js')
 	const members = new Discord.GuildMember();
-	let member = message.mentions.users.first().username;
+	let member = message.mentions.users.first().username || message.author.username;
 	let template = [
 		"https://media1.giphy.com/media/JoyVW5PNALEyCf9tkc/giphy-downsized-large.gif",
 		"https://i.gifer.com/MbUZ.gif",
