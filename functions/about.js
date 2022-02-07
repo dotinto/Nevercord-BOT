@@ -4,7 +4,7 @@ module.exports.run = async(client,message,args) => {
 	const embed = new Discord.MessageEmbed()
 	.setTitle('О боте')
 	.setColor('#2F3136')
-	.addField('Разработчик', 'Intoshiro#5822\n**➥ [[Github]](https://github.com/1ntosh1ro)**', true)
+	.addField('Разработчик', 'Intoshiro#5822\n**➥ [[Github]](https://github.com/Int0shiro)**', true)
 	.addField('Страна создания', '<:flag_ua:910255758321524756> Украина / Україна / Ukraine', true)
 	.addField('Язык программирования', 'JavaScript', true)
 	.addField('Кол-во команд', '35', true)
