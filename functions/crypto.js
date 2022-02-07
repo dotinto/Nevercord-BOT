@@ -10,8 +10,8 @@ module.exports.run = async (client,message,args) => {
 			.setTitle('Генератор крипто-монеты')
 			.setThumbnail(json.logo)
 			.setDescription('Вам выпало:')
-			.addField('Название', json.coin_name, true)
-			.addField('Акроним', json.acronym, true)
+			.addField('Название', `${json.coin_name}`, true)
+			.addField('Акроним', `${json.acronym}`, true)
 			.setColor('#2F3136')
 			message.channel.send(embed);
 		})

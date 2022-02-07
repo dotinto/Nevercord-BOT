@@ -15,7 +15,7 @@ module.exports.run = async(client,message,args) => {
 	const coinIndex = Math.floor(Math.random() * coinValues.length)
 	const coinRes = coinValues[coinIndex]
 	const embed = new Discord.MessageEmbed()
-	.setDescription(`<:coin:892770395030159410> ` + coinRes)
+	.setDescription(`<:coin:892770395030159410> ` + `${coinRes}`)
 	.setColor('#2F3136')
 	message.channel.send(embed)
 }

@@ -9,7 +9,3 @@ module.exports.run = async (client,message,args) => {
 module.exports.help = {
 	name: 'serverlist'
 }
-
-// _qDpKL8orG6H9kzmwa_sbE3CMSFysu9oluc
-
-// 219069250692841473

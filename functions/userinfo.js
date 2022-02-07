@@ -15,6 +15,7 @@ module.exports.run = async(client,message,args) => {
 	.setAuthor(`${Target.tag}`, Target.displayAvatarURL({dynamic: true}))
 	.setThumbnail(Target.displayAvatarURL({display: true}))
 	.setColor('#2F3136')
+	.setTitle('Персональная карточка ' + `${Target.username}`)
 	.addField('Ник', `${Target.username}`, true)
 	.addField('Дискриминатор', `${Target.discriminator}`, true)
 	.addField('Идентификатор', `|| ${Target.id} ||`, true)

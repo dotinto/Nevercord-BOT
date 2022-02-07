@@ -11,7 +11,7 @@ module.exports.run = async(client,message,args) => {
 	let join = res.slice(6)
 	const embed = new Discord.MessageEmbed()
 	.setTitle('Магический шар')
-	.setDescription(result)
+	.setDescription(`${result}`)
 	.setFooter(`${join}`)
 	.setColor('#2F3136')
 	message.channel.send(embed)

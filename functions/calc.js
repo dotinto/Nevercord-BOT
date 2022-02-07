@@ -9,7 +9,7 @@ module.exports.run = async(client,message,args) => {
 		let plus2 = parseInt(num2)
 		let plus = plus1 + plus2
 		const embed = new Discord.MessageEmbed()
-		.setDescription('Результат добавления: ' + plus)
+		.setDescription('Результат добавления: ' + `${plus}`)
 		message.channel.send(embed)
 	}
 	if (args[2] === `-`) {
@@ -17,7 +17,7 @@ module.exports.run = async(client,message,args) => {
 		let minus2 = parseInt(num2)
 		let minus = minus1 - minus2
 		const embed = new Discord.MessageEmbed()
-		.setDescription('Результат вычитания: ' + minus)
+		.setDescription('Результат вычитания: ' + `${minus}`)
 		message.channel.send(embed)
 	}
 	if (args[2] === `*`) {
@@ -25,7 +25,7 @@ module.exports.run = async(client,message,args) => {
 		let multiplication2 = parseInt(num2)
 		let multiplication = multiplication1 * multiplication2
 		const embed = new Discord.MessageEmbed()
-		.setDescription('Результат умножения: ' + multiplication)
+		.setDescription('Результат умножения: ' + `${multiplication}`)
 		message.channel.send(embed)
 	}
 	if (args[2] === `/`) {
@@ -33,7 +33,7 @@ module.exports.run = async(client,message,args) => {
 		let division2 = parseInt(num2)
 		let division = division1 / division2
 		const embed = new Discord.MessageEmbed()
-		.setDescription('Результат деления: ' + division)
+		.setDescription('Результат деления: ' + `${division}`)
 		message.channel.send(embed)
 	}
 	if (args[2] === ':') {

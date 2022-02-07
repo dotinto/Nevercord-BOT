@@ -12,7 +12,7 @@ module.exports.run = (client, message, args) => {
 				const embed = new Discord.MessageEmbed()
 			    .setColor('#2F3136')
 			    .setTitle(`${message.author.username}, коалочка :3`)
-		    	.setDescription('<:flag_ru:889170215349407774> Интересный факт: ' + res.text + '\n\n<:flag_us:889170802635857973> Tip: ' + json.fact)
+		    	.setDescription('<:flag_ru:889170215349407774> Интересный факт: ' + `${res.text}` + '\n\n<:flag_us:889170802635857973> Tip: ' + `${json.fact}`)
 		    	.setImage(json.image)
 			message.channel.send(embed);
 			})

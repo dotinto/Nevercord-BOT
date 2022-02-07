@@ -21,7 +21,7 @@ module.exports.run = async(client,message,args) => {
                         .setColor('#2F3136')
                         .setTitle('Кол-во приглашений')
                         .setThumbnail(message.author.displayAvatarURL())
-                        .setDescription('<@' + message.author.id + '>, Ваше кол-во приглашений на сервер **' + message.guild.name + '**:\n**' + userInviteCount + '**')
+                        .setDescription('<@' + message.author.id + '>, Ваше кол-во приглашений на сервер **' + `${message.guild.name}` + '**:\n**' + `${userInviteCount}` + '**')
                         message.channel.send(embed)
             }
         )
