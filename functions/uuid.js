@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const mojang = require('mojang-api')
 const fetch = require('node-fetch')
+const {Base64} = require('js-base64')
 
 module.exports.run = async(client,message,args) => {
 	let input = 'https://sessionserver.mojang.com/session/minecraft/profile/' + args[1]
@@ -12,6 +13,7 @@ module.exports.run = async(client,message,args) => {
 			    .setTitle('Информация о игроке Minecraft по UUID')
 			    .addField('Никнейм', `${json.name}`)
 			    .addField('UUID', `${json.id}`)
+			    .addThumbnail(Base64.decode(json.properties[value[textures.skin[url]]]))
 				
 				message.channel.send(embed);
 			})
