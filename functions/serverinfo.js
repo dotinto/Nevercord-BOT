@@ -9,7 +9,7 @@ module.exports.run = async(client,message,args) => {
         let region = res.text;
         const embed = new Discord.MessageEmbed()
         .addField('Название сервера', `${message.guild.name}`, true)
-        .addField('Владелец сервера', `${message.guild.owner}(${message.guild.ownerID})`, true)
+        .addField('Владелец сервера', `${message.guild.owner}`, true)
         .addField('Сервер создан', `${message.guild.createdAt.toLocaleString()}`, true)
         .addField('Колличество участников', `${members}`, true)
         .addField('Регион', `${region}`, true)
