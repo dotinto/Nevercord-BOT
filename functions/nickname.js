@@ -1,7 +1,6 @@
 const Discord = require('discord.js')
 const mojang = require('mojang-api')
 const fetch = require('node-fetch')
-const {Base64} = require('js-base64')
 
 module.exports.run = async(client,message,args) => {
 	let input = 'https://api.mojang.com/user/profile/agent/minecraft/name/' + args[1]
