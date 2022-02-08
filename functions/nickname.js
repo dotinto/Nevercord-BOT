@@ -13,7 +13,7 @@ module.exports.run = async(client,message,args) => {
 			    .setTitle('Информация о игроке Minecraft по нику')
 			    .addField('Никнейм', `${json.name}`)
 			    .addField('UUID', `${json.id}`)
-			    .setDescription('История никнеймов', history.name)
+			    .addField('История никнеймов', history.name)
 				
 				message.channel.send(embed);
 			})
