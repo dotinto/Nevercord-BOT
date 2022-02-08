@@ -4,7 +4,6 @@ const fetch = require('node-fetch')
 
 module.exports.run = async(client,message,args) => {
 	let info = 'https://api.mojang.com/user/profile/agent/minecraft/name/' + args[1]
-	let history = 'https://api.mojang.com/user/profile/' + args[1] +'/names'
 	let res = fetch(info, history)
 		.then(res => res.json())
 		.then(json => {
@@ -13,8 +12,6 @@ module.exports.run = async(client,message,args) => {
 			    .setTitle('Информация о игроке Minecraft по нику')
 			    .addField('Никнейм', `${json.name}`)
 			    .addField('UUID', `${json.id}`)
-			    .addField('История никнеймов', history.name)
-				
 				message.channel.send(embed);
 			})
 	if (args[1] === null) return;
