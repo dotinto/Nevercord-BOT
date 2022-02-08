@@ -8,12 +8,13 @@ module.exports.run = async(client,message,args) => {
 	let res = fetch(input)
 		.then(res => res.json())
 		.then(json => {
+			const dec = Base64.decode(json.properties.value);
 				const embed = new Discord.MessageEmbed()
 			    .setColor('#2F3136')
 			    .setTitle('Информация о игроке Minecraft по UUID')
 			    .addField('Никнейм', `${json.name}`)
 			    .addField('UUID', `${json.id}`)
-			    .addThumbnail(Base64.decode(json.properties[value[textures.skin[url]]]))
+			    .setThumbnail(dec.textures.skin.url)
 				
 				message.channel.send(embed);
 			})
