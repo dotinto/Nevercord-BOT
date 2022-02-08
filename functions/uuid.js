@@ -14,7 +14,7 @@ module.exports.run = async(client,message,args) => {
 			    .setTitle('Информация о игроке Minecraft по UUID')
 			    .addField('Никнейм', `${json.name}`)
 			    .addField('UUID', `${json.id}`)
-			    .setThumbnail(dec.textures.skin.url)
+			    .addField(dec.textures.skin.url)
 				
 				message.channel.send(embed);
 			})
