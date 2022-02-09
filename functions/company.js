@@ -23,6 +23,8 @@ module.exports.run = async (client,message,args) => {
 			.addField('Широта', `${json.latitude}`, true)
 			.addField('Долгота', `${json.longitude}`, true)
 			.setColor('#2F3136')
+			.setTimestamp()
+        	.setFooter(`${client.user.username}`, client.user.avatarURL())
 			message.channel.send(embed);
 		})
 }

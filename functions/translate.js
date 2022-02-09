@@ -7,7 +7,9 @@ module.exports.run = async(client,message,args) => {
 	translate(join, {to: 'ru'}).then(res => {
     	const embed = new Discord.MessageEmbed()
     	.setDescription(`${join}`)
-    	.setFooter('Переведено на Русский')
+    	.setTimestamp()
+        .setFooter(`${client.user.username}`, client.user.avatarURL())
+    	message.channel.send(embed)
 	})
 }
 

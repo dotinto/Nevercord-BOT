@@ -13,6 +13,8 @@ module.exports.run = async (client,message,args) => {
 			.addField('ОС', `${json.os}`, true)
 			.addField('Стак', `${json.stack}`, true)
 			.setColor('#2F3136')
+			.setTimestamp()
+        	.setFooter(`${client.user.username}`, client.user.avatarURL())
 			message.channel.send(embed);
 		})
 }

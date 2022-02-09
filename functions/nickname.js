@@ -12,6 +12,8 @@ module.exports.run = async(client,message,args) => {
 			    .setTitle('Информация о игроке Minecraft по нику')
 			    .addField('Никнейм', `${json.name}`)
 			    .addField('UUID', `${json.id}`)
+			    .setTimestamp()
+        		.setFooter(`${client.user.username}`, client.user.avatarURL())
 				message.channel.send(embed);
 			})
 	if (args[1] === null) return;

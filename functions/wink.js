@@ -11,6 +11,8 @@ module.exports.run = async(client,message,args) => {
 			    .setColor('#2F3136')
 			    .setTitle(`${message.author.username} подмигнул ${member.username}`)
 		    	.setImage(json.link)
+		    	.setTimestamp()
+        		.setFooter(`${client.user.username}`, client.user.avatarURL())
 			message.channel.send(embed);
 			})
 }

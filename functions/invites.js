@@ -19,6 +19,8 @@ module.exports.run = async(client,message,args) => {
                     }
                         const embed = new Discord.MessageEmbed()
                         .setColor('#2F3136')
+                        .setTimestamp()
+                        .setFooter(`${client.user.username}`, client.user.avatarURL())
                         .setTitle('Кол-во приглашений')
                         .setThumbnail(message.author.displayAvatarURL())
                         .setDescription('<@' + message.author.id + '>, Ваше кол-во приглашений на сервер **' + `${message.guild.name}` + '**:\n**' + `${userInviteCount}` + '**')

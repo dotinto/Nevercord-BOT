@@ -23,6 +23,8 @@ module.exports.run = async(client,message,args) => {
 	.addField('Бот?', `${Target.bot}`)
 	.addField("Как участник", `${mjaf}\n**-** ${mja}`, true)
 	.addField("Как пользователь", `${tcaf}\n**-** ${tca}`, true)
+	.setTimestamp()
+    .setFooter(`${client.user.username}`, client.user.avatarURL())
 	message.channel.send(Response)
 }
 

@@ -14,6 +14,7 @@ module.exports.run = async(client,message,args) => {
 	.setDescription(`${result}`)
 	.setFooter(`${join}`)
 	.setColor('#2F3136')
+	.setTimestamp()
 	message.channel.send(embed)
 }
 

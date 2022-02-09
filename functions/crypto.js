@@ -13,6 +13,8 @@ module.exports.run = async (client,message,args) => {
 			.addField('Название', `${json.coin_name}`, true)
 			.addField('Акроним', `${json.acronym}`, true)
 			.setColor('#2F3136')
+			.setTimestamp()
+        	.setFooter(`${client.user.username}`, client.user.avatarURL())
 			message.channel.send(embed);
 		})
 }

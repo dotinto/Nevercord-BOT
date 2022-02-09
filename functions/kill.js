@@ -15,6 +15,8 @@ module.exports.run = async(client,message,args) => {
 	.setTitle(`${message.author.username} убил ${member}`)
 	.setImage(template2)
 	.setColor('#2F3136')
+	.setTimestamp()
+    .setFooter(`${client.user.username}`, client.user.avatarURL())
 	message.channel.send(embed)
 }
 

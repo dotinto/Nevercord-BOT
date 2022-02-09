@@ -12,6 +12,8 @@ module.exports.run = async (client,message,args) => {
 		    .attachFiles(attachmentt)
 		    .setImage('attachment://triggered.gif')
 		    .setColor('#2F3136')
+		    .setTimestamp()
+        	.setFooter(`${client.user.username}`, client.user.avatarURL())
 		return message.channel.send(embed);
 	}
 	const WastedList = message.mentions.users.map(user => {
@@ -22,6 +24,8 @@ module.exports.run = async (client,message,args) => {
 		    .attachFiles(attachmentt)
 		    .setImage('attachment://triggered.gif')
 		    .setColor('#2F3136')
+		    .setTimestamp()
+        	.setFooter(`${client.user.username}`, client.user.avatarURL())
 
 		return embed
 	});

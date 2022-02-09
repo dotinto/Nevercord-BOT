@@ -17,6 +17,8 @@ module.exports.run = async (client,message,args) => {
 			.addField('Серийный номер', `${json.serial_number}`, true)
 			.addField('Версия', `${json.version}`, true)
 			.setColor('#2F3136')
+			.setTimestamp()
+        	.setFooter(`${client.user.username}`, client.user.avatarURL())
 			message.channel.send(embed);
 		})
 }
