@@ -24,6 +24,7 @@ module.exports.run = async(client,message,args) => {
 	.addField("Как участник", `${mjaf}\n**-** ${mja}`, true)
 	.addField("Как пользователь", `${tcaf}\n**-** ${tca}`, true)
 	.setTimestamp()
+	.setImage(Target.bannerURL())
     .setFooter(`${client.user.username}`, client.user.avatarURL())
 	message.channel.send(Response)
 }
