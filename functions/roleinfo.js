@@ -15,7 +15,7 @@ module.exports.run = async(client,message,args) => {
 	.addField('ID', `||${rid}||`, true)
 	.addField('Позиция', rpos, true)
 	.addField('Кол-во участников с этой ролью', rmemb, true)
-	.addField('Коды цвета', `HEX: ${rhex}\nRGB: ${hexToRgb(rhex)}`, true)
+	.addField('Коды цвета', `HEX: ${rhex}`, true)
 	message.channel.send(embed)
 
 	if (args[1] === null) return;
