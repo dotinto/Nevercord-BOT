@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const guild = new Discord.Guild();
-const hexToRgb = require('hex-to-rgb');
 
 module.exports.run = async(client,message,args) => {
 	let rname = message.mentions.roles.first().name;
