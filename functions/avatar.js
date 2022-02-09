@@ -6,8 +6,6 @@ module.exports.run = async(client,message,args) => {
 	.setTitle(`Аватар ${Member.username}`)
 	.setImage(Member.displayAvatarURL())
 	.setColor('#2F3136')
-	.setTimestamp()
-    .setFooter(`${client.user.username}`, client.user.avatarURL())
 	message.channel.send(embed)
 }
 
