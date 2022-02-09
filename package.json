@@ -11,6 +11,7 @@
     "discord.js": "^12.5.3",
     "discord.js-commando": "^0.12.3",
     "fs": "0.0.1-security",
+    "hex-to-rgb": "^1.0.1",
     "https": "^1.0.0",
     "mojang-api": "0.0.2",
     "moment": "^2.29.1",

@@ -1,16 +1,21 @@
 const Discord = require('discord.js');
 const guild = new Discord.Guild();
+const hexToRgb = require('hex-to-rgb');
 
 module.exports.run = async(client,message,args) => {
 	let rname = message.mentions.roles.first().name;
 	let rid = message.mentions.roles.first().id;
 	let rpos = message.guild.roles.cache.get(rid).position;
+	let rmemb = guild.roles.get(rid).members.size;
+	let rhex = message.role.displayHexColor;
 
 	const embed = new Discord.MessageEmbed()
 	.setTitle('Информация о роли ' + rname)
-	.addField('Название', rname)
-	.addField('ID', `||${rid}||`)
-	.addField('Позиция', rpos)
+	.addField('Название', rname, true)
+	.addField('ID', `||${rid}||`, true)
+	.addField('Позиция', rpos, true)
+	.addField('Кол-во участников с этой ролью', rmemb, true)
+	.addField('Коды цвета', `HEX: ${rhex}\nRGB: ${hexToRgb(rhex)}`, true)
 	message.channel.send(embed)
 
 	if (args[1] === null) return;
