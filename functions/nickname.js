@@ -4,7 +4,7 @@ const fetch = require('node-fetch')
 
 module.exports.run = async(client,message,args) => {
 	let info = 'https://api.mojang.com/user/profile/agent/minecraft/name/' + args[1]
-	let res = fetch(info, history)
+	let res = fetch(info)
 		.then(res => res.json())
 		.then(json => {
 				const embed = new Discord.MessageEmbed()
