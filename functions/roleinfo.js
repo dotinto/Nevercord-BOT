@@ -6,7 +6,7 @@ module.exports.run = async(client,message,args) => {
 	let rid = message.mentions.roles.first().id;
 	let rpos = message.guild.roles.cache.get(rid).position;
 	let rmemb = message.guild.roles.cache.get(rid).members.size;
-	let rhex = message.mentions.roles.first().displayHexColor;
+	let rhex = message.mentions.roles.first().displayColor;
 
 	const embed = new Discord.MessageEmbed()
 	.setTitle('Информация о роли ' + rname)
