@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const guild = new Discord.Guild();
 const Role = new Discord.Role();
+const hexToRgb = require('hex-to-rgb');
 
 module.exports.run = async(client,message,args) => {
 	let rname = message.mentions.roles.first().name;
@@ -15,7 +16,7 @@ module.exports.run = async(client,message,args) => {
 	.addField('ID', `||${rid}||`, true)
 	.addField('Позиция', rpos, true)
 	.addField('Кол-во участников с этой ролью', rmemb, true)
-	.addField('Коды цвета', `HEX: ${rhex}`, true)
+	.addField('Коды цвета', `HEX: ${rhex}\nRGB: ${hexToRgb(rhex)}`, true)
 	.setTimestamp()
     .setFooter(`${client.user.username}`, client.user.avatarURL())
 	message.channel.send(embed)
