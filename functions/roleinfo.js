@@ -12,6 +12,8 @@ module.exports.run = async(client,message,args) => {
 	.addField('ID', `||${rid}||`)
 	.addField('Позиция', rpos)
 	message.channel.send(embed)
+
+	if (args[1] === null) return 'none';
 }
 
 module.exports.help = {
