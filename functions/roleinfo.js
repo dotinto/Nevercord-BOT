@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const guild = new Discord.Guild();
+const Role = new Discord.Role();
 
 module.exports.run = async(client,message,args) => {
 	let rname = message.mentions.roles.first().name;
@@ -15,6 +16,8 @@ module.exports.run = async(client,message,args) => {
 	.addField('Позиция', rpos, true)
 	.addField('Кол-во участников с этой ролью', rmemb, true)
 	.addField('Коды цвета', `HEX: ${rhex}`, true)
+	.setTimestamp()
+    .setFooter(`${client.user.username}`, client.user.avatarURL())
 	message.channel.send(embed)
 
 	if (args[1] === null) return;
