@@ -13,7 +13,7 @@ module.exports.run = async(client,message,args) => {
 	.addField('Позиция', rpos)
 	message.channel.send(embed)
 
-	if (args[1] === null) return 'none';
+	if (args[1] === null) return;
 }
 
 module.exports.help = {
