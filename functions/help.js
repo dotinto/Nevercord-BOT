@@ -8,7 +8,7 @@ module.exports.run = async(client,message,args) => {
     .setFooter(`${client.user.username}`, client.user.avatarURL())
 	.addField('Информации', '`>platform` `>about` `>userinfo` `>serverinfo` `>roleinfo` `>usage`')
 	.addField('RолеПлей', '`>kill` `>wasted` `>suicide` `>hug` `>pat` `>wink` `>me`')
-	.addField('Утилиты', '`>avatar `>servericon `>say')
+	.addField('Утилиты', '`>avatar` `>servericon` `>say`')
 	.addField('Животные', '`>bird` `>cat` `>dog` `>fox` `>kangaroo` `>koala` `>panda` `>raccoon` `>redpanda`')
 	.addField('Игры', '`>coin` `>knb` `>ball`')
 	.addField('Minecraft', '`>nickname` `>uuid`')
