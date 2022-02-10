@@ -24,19 +24,19 @@ function getWin(first, second)
 	.setTitle("Камень, ножницы, бумага")
 	.setDescription('**Проигрыш :(**  Подробности:')
 	.addField('Вы:', first)
-	.addField('Бот:', second);
+	.addField('Бот:', second)
 
 	const winning = new Discord.MessageEmbed()
 	.setTitle("Камень, ножницы, бумага")
 	.setDescription('**Выигрыш :)**  Подробности:')
 	.addField('Вы:', first)
-	.addField('Бот:', second);
+	.addField('Бот:', second)
 
 	const draw = new Discord.MessageEmbed()
 	.setTitle("Камень, ножницы, бумага")
 	.setDescription('**Ничья :|**  Подробности:')
 	.addField('Вы:', first)
-	.addField('Бот:', second);
+	.addField('Бот:', second)
 
     let str = "";
     if(first == second){return str = message.channel.send(draw); }
