@@ -3,7 +3,10 @@ let randstring = ["🌑","🧻","✂️"];
 
 module.exports.run = async (bot,message,args) => {
 	const welcome = new Discord.MessageEmbed()
+	.setTimestamp()
+    .setFooter(`${client.user.username}`, client.user.avatarURL())
 	.setTitle("Камень, ножницы, бумага")
+	.setColor('#2F3136')
 	.setDescription("Твоя задача написать любой из этих эмодзи: 🌑,🧻,✂. А бот сгенерирует рандомную из них. У тебя есть 30 секунд, что бы выбрать!");
 
     const filter = m => (m.content == '🌑' || m.content =='✂️' || m.content == '🧻');
