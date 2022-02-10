@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 let randstring = ["🌑","🧻","✂️"];
 
-module.exports.run = async (bot,message,args) => {
+module.exports.run = async (client,message,args) => {
 	const welcome = new Discord.MessageEmbed()
 	.setTimestamp()
     .setFooter(`${client.user.username}`, client.user.avatarURL())
