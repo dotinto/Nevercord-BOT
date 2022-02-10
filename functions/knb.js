@@ -39,13 +39,13 @@ function getWin(first, second)
 	.addField('Бот:', second);
 
     let str = "";
-    if(first == second){return str = draw; }
-    else if(first == randstring[0] && second == randstring[1]){return str = losing; }
-    else if(first == randstring[1] && second == randstring[2]){return str = losing; }
-    else if(first == randstring[2] && second == randstring[0]){return str = losing; }
-    else if(first == randstring[2] && second == randstring[1]){return str = winning; }
-    else if(first == randstring[1] && second == randstring[0]){return str = winning; }
-    else if(first == randstring[0] && second == randstring[2]){return str = winning; }
+    if(first == second){return str = message.channel.send(draw); }
+    else if(first == randstring[0] && second == randstring[1]){return str = message.channel.send(losing); }
+    else if(first == randstring[1] && second == randstring[2]){return str = message.channel.send(losing); }
+    else if(first == randstring[2] && second == randstring[0]){return str = message.channel.send(losing); }
+    else if(first == randstring[2] && second == randstring[1]){return str = message.channel.send(winning); }
+    else if(first == randstring[1] && second == randstring[0]){return str = message.channel.send(winning); }
+    else if(first == randstring[0] && second == randstring[2]){return str = message.channel.send(winning); }
 }
 
 function getRandomInt(max) {
