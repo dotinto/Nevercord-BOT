@@ -64,5 +64,5 @@ client.on('ready', () => {
                 type: "COMPETING" 
             } 
         });
-    }, 3000000);
+    }, 60000);
 });

@@ -6,11 +6,11 @@ module.exports.run = async(client,message,args) => {
 	.setColor('#2F3136')
 	.setTimestamp()
     .setFooter(`${client.user.username}`, client.user.avatarURL())
-	.addField('Информации', '`>platform` `>about` `>userinfo` `>serverinfo` `>roleinfo` `>usage`')
+	.addField('Информация', '`>platform` `>about` `>userinfo` `>serverinfo` `>roleinfo` `>usage`')
 	.addField('RолеПлей', '`>kill` `>wasted` `>suicide` `>hug` `>pat` `>wink` `>me`')
 	.addField('Утилиты', '`>avatar` `>servericon` `>say`')
 	.addField('Животные', '`>bird` `>cat` `>dog` `>fox` `>kangaroo` `>koala` `>panda` `>raccoon` `>redpanda`')
-	.addField('Игры', '`>coin` `>knb` `>ball`')
+	.addField('Игры', '`>coin` `>knb` `>8ball`')
 	.addField('Minecraft', '`>nickname` `>uuid`')
 	message.channel.send(embed)
 }
