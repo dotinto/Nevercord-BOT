@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports.run = async(client,message,args) => {
 
-	let Target = message.members.mentions.first() || message.author
+	const Target = message.mentions.users.first() || message.author;
 
 	let link = `https://some-random-api.ml/canvas/jail?avatar=${Target.displayAvatarURL()}`
 	const attachment = new Discord.MessageAttachment(link, 'jail.gif');
