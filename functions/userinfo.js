@@ -21,7 +21,6 @@ module.exports.run = async(client,message,args) => {
 	.addField('Идентификатор', `|| ${Target.id} ||`, true)
 	.addField('Роли', `${Member.roles.cache.map(r => r).join(' ').replace("@everyone", " ")}`, true)
 	.addField('Бот?', `${Target.bot}`, true)
-	.addField('Ник на сервере', Target.nickname)
 	.addField('Аватар', `[[клик]](${Target.displayAvatarURL()}?size=1024)`, true)
 	.addField("Как участник", `${mjaf}\n**-** ${mja}`, true)
 	.addField("Как пользователь", `${tcaf}\n**-** ${tca}`, true)
