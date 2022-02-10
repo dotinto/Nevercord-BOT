@@ -27,13 +27,13 @@ function getWin(first, second)
 	// const draw = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Ничья :|**  Подробности:').addField('Вы:', firs.addField('Бот:', second)
 
     let str = "";
-    if(first == second){return str = let draw = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Ничья :|**  Подробности:').addField('Вы:', first).addField('Бот:', second); }
-    else if(first == randstring[0] && second == randstring[1]){return str = let winning = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Выигрыш :)**  Подробности:').addField('Вы:', first).addField('Бот:', second); }
-    else if(first == randstring[1] && second == randstring[2]){return str = let winning = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Выигрыш :)**  Подробности:').addField('Вы:', first).addField('Бот:', second); }
-    else if(first == randstring[2] && second == randstring[0]){return str = let winning = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Выигрыш :)**  Подробности:').addField('Вы:', first).addField('Бот:', second); }
-    else if(first == randstring[2] && second == randstring[1]){return str = let losing = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Проигрыш :(**  Подробности:').addField('Вы:', first).addField('Бот:', second)'; }
-    else if(first == randstring[1] && second == randstring[0]){return str = let losing = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Проигрыш :(**  Подробности:').addField('Вы:', first).addField('Бот:', second)'; }
-    else if(first == randstring[0] && second == randstring[2]){return str = let losing = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Проигрыш :(**  Подробности:').addField('Вы:', first).addField('Бот:', second)'; }
+    if(first == second){return str = {let draw = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Ничья :|**  Подробности:').addField('Вы:', first).addField('Бот:', second)}; }
+    else if(first == randstring[0] && second == randstring[1]){return str = {let winning = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Выигрыш :)**  Подробности:').addField('Вы:', first).addField('Бот:', second}); }
+    else if(first == randstring[1] && second == randstring[2]){return str = {let winning = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Выигрыш :)**  Подробности:').addField('Вы:', first).addField('Бот:', second}); }
+    else if(first == randstring[2] && second == randstring[0]){return str = {let winning = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Выигрыш :)**  Подробности:').addField('Вы:', first).addField('Бот:', second}); }
+    else if(first == randstring[2] && second == randstring[1]){return str = {let losing = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Проигрыш :(**  Подробности:').addField('Вы:', first).addField('Бот:', second})'; }
+    else if(first == randstring[1] && second == randstring[0]){return str = {let losing = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Проигрыш :(**  Подробности:').addField('Вы:', first).addField('Бот:', second})'; }
+    else if(first == randstring[0] && second == randstring[2]){return str = {let losing = new Discord.MessageEmbed().setTitle("Камень, ножницы, бумага").setDescription('**Проигрыш :(**  Подробности:').addField('Вы:', first).addField('Бот:', second})'; }
 }
 
 function getRandomInt(max) {
