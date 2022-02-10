@@ -1,28 +1,51 @@
 let randstring = ["🌑","🧻","✂️"];
+const Discord = require('discord.js')
 
 module.exports.run = async (bot,message,args) => {
+	const welcome = new Discord.MessageEmbed()
+	.setTitle("Камень, ножницы, бумага")
+	.setDescription("Твоя задача написать любой из этих эмодзи: 🌑,🧻,✂. А бот сгенерирует рандомную из них. У тебя есть 30 секунд, что бы выбрать!");
+
     const filter = m => (m.content == '🌑' || m.content =='✂️' || m.content == '🧻');
-    await message.channel.send('Welcome to Rock paper scissors, please copy and paste form which you choose in 30 sec ✂️ 🧻 🌑').then(() => {
+    await message.channel.send(welcome).then(() => {
         message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
             .then(collected => {
                 message.channel.send(getWin(collected.first().content,randstring[getRandomInt(3)]));
             })
             .catch(collected => {
-                message.channel.send('Time ran out');
+                message.channel.send('Время вышло ¯\\_(ツ)_/¯');
             });
         });
 }
 
+const losing = new Discord.MessageEmbed()
+.setTitle("Камень, ножницы, бумага")
+.setDescription('**Проигрыш :(**  Подробности:')
+.addField('Вы:', first)
+.addField('Бот:', second);
+
+const winning = new Discord.MessageEmbed()
+.setTitle("Камень, ножницы, бумага")
+.setDescription('**Выигрыш :)**  Подробности:')
+.addField('Вы:', first)
+.addField('Бот:', second);
+
+const draw = new Discord.MessageEmbed()
+.setTitle("Камень, ножницы, бумага")
+.setDescription('**Ничья :|**  Подробности:')
+.addField('Вы:', first)
+.addField('Бот:', second);
+
 function getWin(first, second)
 {
     let str = "";
-    if(first == second){return str = '> ' + first + '\n' + 'I choosed ' + first +', Draw'; }
-    else if(first == randstring[0] && second == randstring[1]){return str = '> ' + first + '\n' + 'I choosed ' + second + ' You Lose'; }
-    else if(first == randstring[1] && second == randstring[2]){return str = '> ' + first + '\n' + 'I choosed ' + second + ' You Lose'; }
-    else if(first == randstring[2] && second == randstring[0]){return str = '> ' + first + '\n' + 'I choosed ' + second + ' You Lose'; }
-    else if(first == randstring[2] && second == randstring[1]){return str = '> ' + first + '\n' + 'I choosed ' + second + ' You Won'; }
-    else if(first == randstring[1] && second == randstring[0]){return str = '> ' + first + '\n' + 'I choosed ' + second + ' You Won'; }
-    else if(first == randstring[0] && second == randstring[2]){return str = '> ' + first + '\n' + 'I choosed ' + second + ' You Won'; }
+    if(first == second){return str = draw; }
+    else if(first == randstring[0] && second == randstring[1]){return str = losing; }
+    else if(first == randstring[1] && second == randstring[2]){return str = losing; }
+    else if(first == randstring[2] && second == randstring[0]){return str = losing; }
+    else if(first == randstring[2] && second == randstring[1]){return str = winning; }
+    else if(first == randstring[1] && second == randstring[0]){return str = winning; }
+    else if(first == randstring[0] && second == randstring[2]){return str = winning; }
 }
 
 function getRandomInt(max) {
