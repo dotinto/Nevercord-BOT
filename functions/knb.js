@@ -1,5 +1,5 @@
-let randstring = ["🌑","🧻","✂️"];
 const Discord = require('discord.js')
+let randstring = ["🌑","🧻","✂️"];
 
 module.exports.run = async (bot,message,args) => {
 	const welcome = new Discord.MessageEmbed()
@@ -13,7 +13,7 @@ module.exports.run = async (bot,message,args) => {
                 message.channel.send(getWin(collected.first().content,randstring[getRandomInt(3)]));
             })
             .catch(collected => {
-                message.channel.send('Время вышло ¯\\_(ツ)_/¯');
+                message.channel.send('Time ran out');
             });
         });
 }
