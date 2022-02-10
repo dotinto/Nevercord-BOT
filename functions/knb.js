@@ -21,7 +21,7 @@ module.exports.run = async (bot,message,args) => {
 function getWin(first, second)
 {
     let str = "";
-    if(first == second){return str = message.channel.send(draw); }
+    if(first == second){return str = '> ' + first + '\n' + 'Бот выбрал ' + second + ', Ничья';}
     else if(first == randstring[0] && second == randstring[1]){return str = '> ' + first + '\n' + 'Бот выбрал ' + second + ', Вы проиграли'; }
     else if(first == randstring[1] && second == randstring[2]){return str = '> ' + first + '\n' + 'Бот выбрал ' + second + ', Вы проиграли'; }
     else if(first == randstring[2] && second == randstring[0]){return str = '> ' + first + '\n' + 'Бот выбрал ' + second + ', Вы проиграли'; }
