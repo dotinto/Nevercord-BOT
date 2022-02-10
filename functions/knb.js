@@ -20,32 +20,14 @@ module.exports.run = async (bot,message,args) => {
 
 function getWin(first, second)
 {
-	const losing = new Discord.MessageEmbed()
-	.setTitle("Камень, ножницы, бумага")
-	.setDescription('**Проигрыш :(**  Подробности:')
-	.addField('Вы:', first)
-	.addField('Бот:', second)
-
-	const winning = new Discord.MessageEmbed()
-	.setTitle("Камень, ножницы, бумага")
-	.setDescription('**Выигрыш :)**  Подробности:')
-	.addField('Вы:', first)
-	.addField('Бот:', second)
-
-	const draw = new Discord.MessageEmbed()
-	.setTitle("Камень, ножницы, бумага")
-	.setDescription('**Ничья :|**  Подробности:')
-	.addField('Вы:', first)
-	.addField('Бот:', second)
-
     let str = "";
     if(first == second){return str = message.channel.send(draw); }
-    else if(first == randstring[0] && second == randstring[1]){return str = message.channel.send(losing); }
-    else if(first == randstring[1] && second == randstring[2]){return str = message.channel.send(losing); }
-    else if(first == randstring[2] && second == randstring[0]){return str = message.channel.send(losing); }
-    else if(first == randstring[2] && second == randstring[1]){return str = message.channel.send(winning); }
-    else if(first == randstring[1] && second == randstring[0]){return str = message.channel.send(winning); }
-    else if(first == randstring[0] && second == randstring[2]){return str = message.channel.send(winning); }
+    else if(first == randstring[0] && second == randstring[1]){return str = '> ' + first + '\n' + 'Бот выбрал ' + second + ', Вы проиграли'; }
+    else if(first == randstring[1] && second == randstring[2]){return str = '> ' + first + '\n' + 'Бот выбрал ' + second + ', Вы проиграли'; }
+    else if(first == randstring[2] && second == randstring[0]){return str = '> ' + first + '\n' + 'Бот выбрал ' + second + ', Вы проиграли'; }
+    else if(first == randstring[2] && second == randstring[1]){return str = '> ' + first + '\n' + 'Бот выбрал ' + second + ', Вы выиграли'; }
+    else if(first == randstring[1] && second == randstring[0]){return str = '> ' + first + '\n' + 'Бот выбрал ' + second + ', Вы выиграли'; }
+    else if(first == randstring[0] && second == randstring[2]){return str = '> ' + first + '\n' + 'Бот выбрал ' + second + ', Вы выиграли'; }
 }
 
 function getRandomInt(max) {
