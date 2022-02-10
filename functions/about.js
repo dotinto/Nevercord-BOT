@@ -4,6 +4,7 @@ module.exports.run = async(client,message,args) => {
 	const embed = new Discord.MessageEmbed()
 	.setTitle('О боте')
 	.setColor('#2F3136')
+	.setAuthor(message.author.username, message.author.displayAvatarURL())
 	.addField('Разработчик', 'Intoshiro#5822\n**➥ [[Github]](https://github.com/Int0shiro)**', true)
 	.addField('Страна создания', '<:flag_ua:910255758321524756> Украина / Україна / Ukraine', true)
 	.addField('Язык программирования', 'JavaScript', true)

@@ -13,6 +13,7 @@ module.exports.run = async (client,message,args) => {
 		    .setImage('attachment://triggered.gif')
 		    .setColor('#2F3136')
 		    .setTimestamp()
+		    .setAuthor(message.author.username, message.author.displayAvatarURL())
         	.setFooter(`${client.user.username}`, client.user.avatarURL())
 		return message.channel.send(embed);
 	}
@@ -24,6 +25,7 @@ module.exports.run = async (client,message,args) => {
 		    .attachFiles(attachmentt)
 		    .setImage('attachment://triggered.gif')
 		    .setColor('#2F3136')
+		    .setAuthor(message.author.username, message.author.displayAvatarURL())
 		    .setTimestamp()
         	.setFooter(`${client.user.username}`, client.user.avatarURL())
 

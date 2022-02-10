@@ -14,6 +14,7 @@ module.exports.run = (client, message, args) => {
 			    .setTitle(`${message.author.username}, птичка :3`)
 		    	.setDescription('<:flag_ru:889170215349407774> Интересный факт: ' + `${res.text}` + '\n\n<:flag_us:889170802635857973> Tip: ' + `${json.fact}`)
 		    	.setImage(json.image)
+		    	.setAuthor(message.author.username, message.author.displayAvatarURL())
 		    	.setTimestamp()
         		.setFooter(`${client.user.username}`, client.user.avatarURL())
 			message.channel.send(embed);

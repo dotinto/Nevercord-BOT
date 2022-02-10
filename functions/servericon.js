@@ -7,6 +7,7 @@ module.exports.run = async(client,message,args) => {
 	.setImage(message.guild.iconURL() + '?size=1536')
 	.setColor('#2F3136')
 	.setTimestamp()
+	.setAuthor(message.author.username, message.author.displayAvatarURL())
     .setFooter(`${client.user.username}`, client.user.avatarURL())
 	message.channel.send(embed)
 }

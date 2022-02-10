@@ -9,6 +9,7 @@ module.exports.run = async(client,message,args) => {
 		.then(json => {
 				const embed = new Discord.MessageEmbed()
 			    .setColor('#2F3136')
+			    .setAuthor(message.author.username, message.author.displayAvatarURL())
 			    .setTitle('Информация о игроке Minecraft по UUID')
 			    .addField('Никнейм', `${json.name}`)
 			    .addField('UUID', `${json.id}`)	

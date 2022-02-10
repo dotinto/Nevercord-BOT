@@ -7,6 +7,7 @@ module.exports.run = async (client,message,args) => {
     .setFooter(`${client.user.username}`, client.user.avatarURL())
 	.setTitle("Камень, ножницы, бумага")
 	.setColor('#2F3136')
+	.setAuthor(message.author.username, message.author.displayAvatarURL())
 	.setDescription("Твоя задача написать любой из этих эмодзи: 🌑,🧻,✂. А бот сгенерирует рандомную из них. У тебя есть 30 секунд, что бы выбрать!");
 
     const filter = m => (m.content == '🌑' || m.content =='✂️' || m.content == '🧻');

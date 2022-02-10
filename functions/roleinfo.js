@@ -18,6 +18,7 @@ module.exports.run = async(client,message,args) => {
 	.addField('Кол-во участников с этой ролью', rmemb, true)
 	.addField('Коды цвета', `HEX: ${rhex}\nRGB: ${hexToRgb(rhex)}`, true)
 	.setTimestamp()
+	.setAuthor(message.author.username, message.author.displayAvatarURL())
 	.setColor('#2F3136')
     .setFooter(`${client.user.username}`, client.user.avatarURL())
 	message.channel.send(embed)

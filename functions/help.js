@@ -6,12 +6,12 @@ module.exports.run = async(client,message,args) => {
 	.setColor('#2F3136')
 	.setTimestamp()
     .setFooter(`${client.user.username}`, client.user.avatarURL())
-	.addField('Источники информации', '**>platform** - платформа бота\n**>about** - о боте\n**>userinfo** - информация о пользователе\n**>serverinfo** - информация о сервере\n**>roleinfo** - узнать информацию о роли\n**>usage** - использование команд', true)
-	.addField('RP команды', '**>kill** - убить\n**>wasted** - "*потрачено*"\n**>suicide** - самоубийство\n**>hug** - обнять\n**>pat** - погладить\n**>wink** - подмигнуть\n**>me** - действие', true)
-	.addField('Утилиты', '**>avatar** - узнать аватар пользователя\n**>servericon** - узнать иконку сервера\n**>say** - сказать от имени бота', true)
-	.addField('Животные', '**>bird**\n**>cat**\n**>dog**\n**>fox**\n**>kangaroo**\n**>koala**\n**>panda**\n**>raccoon**\n**>redpanda**', true)
-	.addField('Генераторы', '**>coin** - подкинуть монетку', true)
-	.addField('Minecraft команды', '**>nickname** - информация по нику\n**>uuid** - информация по ID', true)
+	.addField('Информации', '`>platform` `>about` `>userinfo` `>serverinfo` `>roleinfo` `>usage`')
+	.addField('RолеПлей', '`>kill` `>wasted` `>suicide` `>hug` `>pat` `>wink` `>me`')
+	.addField('Утилиты', '`>avatar `>servericon `>say')
+	.addField('Животные', '`>bird `>cat` `>dog` `>fox` `>kangaroo` `>koala` `>panda` `>raccoon` `>redpanda`')
+	.addField('Игры', '`>coin` `>knb` `>ball`')
+	.addField('Minecraft', '`>nickname` `>uuid`')
 	message.channel.send(embed)
 }
 

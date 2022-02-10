@@ -16,6 +16,7 @@ module.exports.run = async(client,message,args) => {
         .addField('AFK Время', `${message.guild.afkTimeout / 60} минут`, true)
         .addField('AFK Канал', `${message.guild.afkChannelID === null ? 'Нет AFK канала' : client.channels.cache.get(message.guild.afkChannelID).name}`, true)
         .setTimestamp()
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
         .setFooter(`${client.user.username}`, client.user.avatarURL())
         .setColor('#2F3136')
         .setThumbnail(message.guild.iconURL())
