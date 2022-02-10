@@ -23,6 +23,7 @@ module.exports.run = async(client,message,args) => {
 	.addField('Бот?', `${Target.bot}`)
 	.addField("Как участник", `${mjaf}\n**-** ${mja}`, true)
 	.addField("Как пользователь", `${tcaf}\n**-** ${tca}`, true)
+	.addField("Статус", Target.presence.status, true)
 	.setTimestamp()
 	.setImage(Target.bannerURL())
     .setFooter(`${client.user.username}`, client.user.avatarURL())
