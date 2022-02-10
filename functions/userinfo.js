@@ -13,7 +13,7 @@ module.exports.run = async(client,message,args) => {
 
 	const Response = new Discord.MessageEmbed()
 	.setAuthor(message.author.tag, message.author.displayAvatarURL())
-	.setThumbnail(Target.displayAvatarURL({display: true}))
+	.setThumbnail(Target.displayAvatarURL())
 	.setColor('#2F3136')
 	.setTitle('Персональная карточка ' + `${Target.username}`)
 	.addField('Ник', `${Target.username}`, true)
@@ -21,11 +21,11 @@ module.exports.run = async(client,message,args) => {
 	.addField('Идентификатор', `|| ${Target.id} ||`, true)
 	.addField('Роли', `${Member.roles.cache.map(r => r).join(' ').replace("@everyone", " ")}`, true)
 	.addField('Бот?', `${Target.bot}`)
+	.addField('Аватар', `[[клик]](${Target.displayAvatarURL()}?size=1024)`)
 	.addField("Как участник", `${mjaf}\n**-** ${mja}`, true)
 	.addField("Как пользователь", `${tcaf}\n**-** ${tca}`, true)
 	.addField("Статус", Target.presence.status, true)
 	.setTimestamp()
-	.setImage(Target.displayBannerURL())
     .setFooter(`${client.user.username}`, client.user.avatarURL())
 	message.channel.send(Response)
 }
