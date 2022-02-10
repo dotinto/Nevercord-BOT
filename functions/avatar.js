@@ -4,7 +4,7 @@ module.exports.run = async(client,message,args) => {
 	const Member = message.mentions.users.first() || message.author;
 	const embed = new Discord.MessageEmbed()
 	.setTitle(`Аватар ${Member.username}`)
-	.setAuthor(message.author.username, message.author.displayAvatarURL())
+	.setAuthor(message.author.tag, message.author.displayAvatarURL())
 	.setImage(Member.displayAvatarURL() + '?size=1536')
 	.setColor('#2F3136')
 	.setTimestamp()

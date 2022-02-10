@@ -14,7 +14,7 @@ module.exports.run = async (client,message,args) => {
 			.addField('Акроним', `${json.acronym}`, true)
 			.setColor('#2F3136')
 			.setTimestamp()
-			.setAuthor(message.author.username, message.author.displayAvatarURL())
+			.setAuthor(message.author.tag, message.author.displayAvatarURL())
         	.setFooter(`${client.user.username}`, client.user.avatarURL())
 			message.channel.send(embed);
 		})

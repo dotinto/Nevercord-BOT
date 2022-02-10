@@ -12,7 +12,7 @@ module.exports.run = async(client,message,args) => {
 			    .setTitle(`${message.author.username} подмигнул ${member.username}`)
 		    	.setImage(json.link)
 		    	.setTimestamp()
-		    	.setAuthor(message.author.username, message.author.displayAvatarURL())
+		    	.setAuthor(message.author.tag, message.author.displayAvatarURL())
         		.setFooter(`${client.user.username}`, client.user.avatarURL())
 			message.channel.send(embed);
 			})

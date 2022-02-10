@@ -19,7 +19,7 @@ module.exports.run = async(client,message,args) => {
                     }
                         const embed = new Discord.MessageEmbed()
                         .setColor('#2F3136')
-                        .setAuthor(message.author.username, message.author.displayAvatarURL())
+                        .setAuthor(message.author.tag, message.author.displayAvatarURL())
                         .setTimestamp()
                         .setFooter(`${client.user.username}`, client.user.avatarURL())
                         .setTitle('Кол-во приглашений')

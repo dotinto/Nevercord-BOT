@@ -8,7 +8,7 @@ module.exports.run = async(client,message,args) => {
     	const embed = new Discord.MessageEmbed()
     	.setDescription(`${join}`)
     	.setTimestamp()
-    	.setAuthor(message.author.username, message.author.displayAvatarURL())
+    	.setAuthor(message.author.tag, message.author.displayAvatarURL())
         .setFooter(`${client.user.username}`, client.user.avatarURL())
     	message.channel.send(embed)
 	})

@@ -5,7 +5,7 @@ module.exports.run = async(client,message,args) => {
 	.setTitle('Навигационное меню использования')
 	.setColor('#2F3136')
 	.setTimestamp()
-	.setAuthor(message.author.username, message.author.displayAvatarURL())
+	.setAuthor(message.author.tag, message.author.displayAvatarURL())
     .setFooter(`${client.user.username}`, client.user.avatarURL())
 	.addField('Источники информации', '**>platform**\n**>about**\n**>userinfo **`@пользователь`\n**>serverinfo**\n**>roleinfo **`@роль`\n**>usage**')
 	.addField('RP команды', '**>kill** `@пользователь`\n**>wasted** `@пользователь`\n**>suicide** `@пользователь`\n**>hug** `@пользователь`\n**>pat **`@пользователь`\n**>wink **`@пользователь`\n**>me**')

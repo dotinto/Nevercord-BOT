@@ -12,7 +12,7 @@ module.exports.run = async(client,message,args) => {
 	let tcaf = moment(Target.createdAt).format(`MMM Do YYYY, h:mm:ss `)
 
 	const Response = new Discord.MessageEmbed()
-	.setAuthor(message.author.username, message.author.displayAvatarURL())
+	.setAuthor(message.author.tag, message.author.displayAvatarURL())
 	.setThumbnail(Target.displayAvatarURL({display: true}))
 	.setColor('#2F3136')
 	.setTitle('Персональная карточка ' + `${Target.username}`)

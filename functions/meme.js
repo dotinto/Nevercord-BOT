@@ -11,7 +11,7 @@ module.exports.run = (client, message, args) => {
 			translate(json.caption, {to: 'ru'}).then(res => {
 				const embed = new Discord.MessageEmbed()
 			    .setColor('#2F3136')
-			    .setAuthor(message.author.username, message.author.displayAvatarURL())
+			    .setAuthor(message.author.tag, message.author.displayAvatarURL())
 			    .setTitle(`${message.author.username}, рандомный мем :3`)
 		    	.setDescription('<:flag_ru:889170215349407774> Описание: ' + `${res.text}` + '\n\n<:flag_us:889170802635857973> Description: ' + `${json.caption}`)
 		    	.setImage(json.image)

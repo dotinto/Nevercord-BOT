@@ -10,7 +10,7 @@ module.exports.run = async(client,message,args) => {
 	let res = args.join(" ");
 	let join = res.slice(6)
 	const embed = new Discord.MessageEmbed()
-	.setAuthor(message.author.username, message.author.displayAvatarURL())
+	.setAuthor(message.author.tag, message.author.displayAvatarURL())
 	.setTitle('Магический шар')
 	.setDescription(`${result}`)
 	.setFooter(`${join}`)
