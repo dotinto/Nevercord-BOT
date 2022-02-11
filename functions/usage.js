@@ -5,7 +5,7 @@ module.exports.run = async(client,message,args) => {
 	.setTitle('Навигационное меню помощи')
 	.setColor('#2F3136')
 	.setTimestamp()
-	.setDescription('Если вы не нашли нужную команду - вероятнее всего она не нужнаеться в указании доп. параметров')
+	.setDescription('Если вы не нашли нужную команду - вероятнее всего она не нужнаеться в дополнительных параметрах')
     .setFooter(`${client.user.username}`, client.user.avatarURL())
 	.addField('>userinfo', '`>userinfo <@пользователь>`')
 	.addField('>roleinfo', '`>roleinfo <@роль>`')
@@ -20,6 +20,7 @@ module.exports.run = async(client,message,args) => {
 	.addField('>8ball', '`>8ball <вопрос>`')
 	.addField('>uuid', '`>uuid <id игрока>`')
 	.addField('>nickname', '`>nickname <ник игрока>`')
+	.addField('>jail', '`>jail <@пользователь>`')
 	message.channel.send(embed)
 }
 
