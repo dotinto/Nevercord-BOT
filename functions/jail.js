@@ -4,9 +4,9 @@ module.exports.run = async(client,message,args) => {
 
 	const Target = message.mentions.users.first() || message.author;
 
-	let link = `https://some-random-api.ml/canvas/jail?avatar=${Target.displayAvatarURL()}`
+	let link = `https://some-random-api.ml/canvas/jail?avatar=${Target.avatarURL({ format: 'png'})}`
   	const embed = new Discord.MessageEmbed()
-    .setDescription(`<@${Target.tag}> был посажен`)
+    .setDescription(`<@${Target.id}> был посажен`)
 	.setColor('#2F3136')
 	.setTimestamp()
 	.setAuthor(message.author.tag, message.author.displayAvatarURL())
