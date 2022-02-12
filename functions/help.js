@@ -7,7 +7,7 @@ module.exports.run = async(client,message,args) => {
 	.setTimestamp()
     .setFooter(`${client.user.username}`, client.user.avatarURL())
 	.addField('Информация', '`>platform` `>about` `>userinfo` `>serverinfo` `>roleinfo` `>usage`')
-	.addField('RолеПлей', '`>kill` `>wasted` `>suicide` `>hug` `>pat` `>wink` `>me` `>jail`')
+	.addField('RолеПлей', '`>kill` `>wasted` `>suicide` `>hug` `>pat` `>wink` `>me` `>jail` `>try`')
 	.addField('Утилиты', '`>avatar` `>servericon` `>say`')
 	.addField('Животные', '`>bird` `>cat` `>dog` `>fox` `>kangaroo` `>koala` `>panda` `>raccoon` `>redpanda`')
 	.addField('Игры', '`>coin` `>knb` `>8ball`')

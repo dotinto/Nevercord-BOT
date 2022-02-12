@@ -21,6 +21,7 @@ module.exports.run = async(client,message,args) => {
 	.addField('>uuid', '`>uuid <id игрока>`')
 	.addField('>nickname', '`>nickname <ник игрока>`')
 	.addField('>jail', '`>jail <@пользователь>`')
+	.addField('>try', '`>try <@пользователь>`')
 	message.channel.send(embed)
 }
 
