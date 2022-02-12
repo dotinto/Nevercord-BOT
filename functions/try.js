@@ -9,7 +9,7 @@ module.exports.run = async(client,message,args) => {
 	let randomiser = Math.floor(Math.random() * patterns.length)
 	let res = patterns[randomiser]
 	message.channel.bulkDelete(1);
-	message.channel.send('* **' + message.author.username + '** ' + join + ` ${res}`);
+	message.channel.send('* **' + message.author.username + '** ' + join + ':' + ` ${res}`);
 }
 
 module.exports.help = {
