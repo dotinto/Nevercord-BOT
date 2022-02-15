@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 
 module.exports.run = async(client,message,args) => {
 	let toint = args.join(" ").slice(5);
-	let res = Math.floor(toint);
+	let res = Math.floor(eval(toint));
 	const embed = new Discord.MessageEmbed()
 	.setColor('#2F3136')
 	.setAuthor(message.author.tag, message.author.displayAvatarURL())
