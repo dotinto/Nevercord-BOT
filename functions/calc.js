@@ -1,9 +1,9 @@
 const Discord = require('discord.js')
 
 module.exports.run = async(client,message,args) => {
-	let in = args.join(" ").slice(5);
-	let ex = parseInt(in);
-	let res = Math.floor(ex);
+	let toint = args.join(" ").slice(5);
+	let exercise = parseInt(toint);
+	let res = Math.floor(exercise);
 	const embed = new Discord.MessageEmbed()
 	.setColor('#2F3136')
 	.setAuthor(message.author.tag, message.author.displayAvatarURL())
