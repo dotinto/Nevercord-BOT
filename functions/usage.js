@@ -22,6 +22,7 @@ module.exports.run = async(client,message,args) => {
 	.addField('>nickname', '`>nickname <ник игрока>`')
 	.addField('>jail', '`>jail <@пользователь>`')
 	.addField('>try', '`>try <сообщение>`')
+	.addField('>http.cat', '`>http.cat <код ответа>`')
 	message.channel.send(embed)
 }
 
