@@ -12,9 +12,6 @@ module.exports.run = async(client,message,args) => {
 	let mjaf = moment(Member.joinedAt).format(`MMM Do YYYY, h:mm:ss `)
 	let tcaf = moment(Target.createdAt).format(`MMM Do YYYY, h:mm:ss `)
 
-	Target.bot.replace("true", "Да")
-	Target.bot.replace("false", "Нет")
-	
 	const Response = new Discord.MessageEmbed()
 	.setAuthor(message.author.tag, message.author.displayAvatarURL())
 	.setThumbnail(Target.displayAvatarURL())
