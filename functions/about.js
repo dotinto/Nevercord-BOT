@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 
-module.exports.run = async(client,message,args) => {	
+module.exports.run = async(client,message,args,files) => {	
+	let jsfile = files.filter(f => f.split('.').pop() === 'js') 
 	const embed = new Discord.MessageEmbed()
 	.setTitle('О боте')
 	.setColor('#2F3136')
@@ -8,7 +9,7 @@ module.exports.run = async(client,message,args) => {
 	.addField('Разработчик', 'Intoshiro#5822\n**➥ [[Github]](https://github.com/Int0shiro)**', true)
 	.addField('Платформа', 'Node.JS', true)
 	.addField('Язык программирования', 'JavaScript', true)
-	.addField('Кол-во команд', '35', true)
+	.addField('Кол-во команд', jsfile.length, true)
 	.setTimestamp()
     .setFooter(`${client.user.username}`, client.user.avatarURL())
 	message.channel.send(embed)

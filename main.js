@@ -31,8 +31,6 @@ client.on('message', message => {
     if (command_file) command_file.run(client, message, args, prefix)
 })
 
-// token = ODU0NzAzMDg2NDExOTcyNjU4.YMnyRw.W3NUq8K368V0pp50FNRAn1Xa9Eg
-
 client.login(process.env.BOT_TOKEN)
 
 client.on('ready', () => {
